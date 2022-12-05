@@ -1,0 +1,303 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgb(216, 216, 216);
+  border-bottom-right-radius: 2px;
+  border-top-right-radius: 2px;
+  margin-block: 5px;
+  border-radius: 100vh;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    rgb(33, 32, 32),
+    rgb(127, 123, 123),
+    rgb(33, 32, 32)
+  );
+  cursor: pointer;
+  border-radius: 100vh;
+  border: 1px solid rgb(216, 216, 216);
+}
+
+body {
+  margin: 0;
+  font-family: "Lora", serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+a:-webkit-any-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.announcement {
+  height: 30px;
+  background-color: teal;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  text-align: center;
+}
+
+.products-wrapper {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+button {
+  font-family: inherit !important;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.container {
+  min-height: 80vh;
+  display: flex;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  text-decoration: underline;
+  padding: 20px 0px;
+}
+
+.orders-wrapper {
+  background-color: rgb(192, 194, 189);
+  display: flex;
+  flex-direction: column;
+  flex: 3;
+}
+
+.content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  padding: 10px;
+  gap: 20px;
+}
+
+.order {
+  background: linear-gradient(grey, transparent);
+  height: fit-content;
+  padding: 20px;
+  border-radius: 6px;
+  position: relative;
+  transition: 0.5s;
+  box-shadow: 0 0 2px;
+  flex: 1;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  font-size: 18px;
+  margin: 6px 0px;
+  align-items: center;
+}
+
+.id {
+  display: flex;
+  flex: 1;
+  gap: 20px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  gap: 20px;
+}
+
+.value {
+  flex: 1;
+}
+/* .expand {
+  cursor: pointer;
+  text-align: center;
+  background-color: transparent;
+  transition: 0.5s;
+  margin: 0 20px;
+}
+
+.expand:hover {
+  color: black;
+} */
+
+.img {
+  width: 80px;
+  height: 80px;
+}
+
+.product {
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 4px;
+}
+
+.info-product {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 85px;
+}
+
+.info-total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 20px;
+  margin: 0 8px;
+}
+
+.fl {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+}
+
+.headtype {
+  justify-self: start;
+  color: grey;
+}
+
+.val {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.account-wrapper {
+  flex: 1;
+  background-color: black;
+  color: white;
+}
+
+.cancel-button {
+  padding: 6px 10px;
+  font-size: 16px;
+  color: white;
+  border: none;
+  background-color: red;
+  transition: 0.5;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.cancel-button:not([disabled]):hover {
+  scale: 0.9;
+  opacity: 0.9;
+}
+
+.cancel-button:disabled {
+  opacity: 0.7;
+}
+
+.input-section {
+  margin-bottom: 16px;
+}
+
+.input-section > label {
+  display: block;
+}
+.input-section > input {
+  outline: none;
+  padding: 4px;
+  border-radius: 8px;
+}
+
+.change-pass-btn {
+  background-color: transparent;
+  box-shadow: 0 0 4px white;
+  padding: 6px;
+  font-size: 16px;
+  color: white;
+  font-family: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+.change-pass-btn:hover {
+  background-color: rgb(192, 194, 189);
+}
+
+#active {
+  display: block;
+}
+
+.active {
+  display: block;
+}
+.inactive {
+  display: none;
+}
+
+.image-wrapper {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+}
+
+.article-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 4px;
+}
+
+.article-price {
+  text-align: center;
+}
+
+/* .article-wrapper {
+  color: white;
+}
+
+.slide-content {
+  flex: 1;
+} */
+
+.s-container {
+  flex: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  flex-direction: column;
+  border-radius: 80%;
+}
+
+.s-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  gap: 20px;
+}
+
+.article-title {
+  margin-bottom: 10px;
+}
