@@ -30,7 +30,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
         {["/products/:category", "/products/:category/filtered"].map(
           (path, i) => (
             <Route path={path} element={<ProductList />} key={i} />
