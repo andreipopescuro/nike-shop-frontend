@@ -7,6 +7,7 @@ import Products from "../components/HomeProducts";
 import Slider from "../components/HomeSlider";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { publicRequest } from "../lib/requestMethods";
 
 const Home = () => {
   const user = useSelector((state) => state.user?.currentUser);
@@ -15,9 +16,7 @@ const Home = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:5000/api/categories`
-        );
+        const response = await publicRequest.get(`categories`);
         const data = await response.data;
         setTemp(data);
       } catch (error) {

@@ -3,6 +3,7 @@ import styled from "styled-components";
 import ProductsEffect from "./HomeEffectProducts";
 import axios from "axios";
 import { sl, tablet } from "../lib/responsive";
+import { publicRequest } from "../lib/requestMethods";
 
 const Container = styled.div`
   overflow: hidden;
@@ -17,8 +18,8 @@ const Products = ({ current }) => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await axios.get(
-          `http://localhost:5000/api/categories/products/${current}/limit`
+        const response = await publicRequest.get(
+          `/categories/products/${current}/limit`
         );
         const data = await response.data;
         setProducts(data);
