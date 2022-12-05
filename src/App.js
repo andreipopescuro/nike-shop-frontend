@@ -17,6 +17,7 @@ import User from "./pages/User";
 // import { userRequest } from "./lib/requestMethods";
 import { getCart } from "./redux/apiCalls";
 import NotFound from "./pages/NotFound";
+import "~slick-carousel/slick/slick-theme.css";
 function App() {
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user.currentUser);
@@ -30,7 +31,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
+        <Route exact path="/" element={<Home />}></Route>
         {["/products/:category", "/products/:category/filtered"].map(
           (path, i) => (
             <Route path={path} element={<ProductList />} key={i} />
