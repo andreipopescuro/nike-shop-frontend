@@ -16,11 +16,15 @@ import { mobile, sl, tablet, between } from "../lib/responsive";
 
 const Container = styled.div`
   min-height: 80vh;
-  background-color: rgba(9, 9, 9, 0.722);
+  background-color: rgba(64, 90, 130, 0.392);
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  ${mobile({
+    padding: "80px 10px",
+    rowGap: "30px",
+  })}
 `;
 
 const ImgContainer = styled.div`
@@ -52,6 +56,10 @@ const Price = styled.div`
   font-weight: 700;
   font-size: 32px;
   margin: 20px 0px;
+  ${mobile({
+    fontSize: "18px",
+    margin: "",
+  })}
 `;
 
 const Amount = styled.span``;
@@ -62,6 +70,9 @@ const H1 = styled.h1`
   margin: 0;
   margin-bottom: 10px;
   color: whitesmoke;
+  ${mobile({
+    fontSize: "18px",
+  })}
 `;
 
 const CountContainer = styled.div`
@@ -69,6 +80,9 @@ const CountContainer = styled.div`
   align-items: center;
   gap: 4px;
   margin-bottom: 40px;
+  ${mobile({
+    marginBottom: "20px",
+  })}
 `;
 const AddContainer = styled.div`
   display: flex;

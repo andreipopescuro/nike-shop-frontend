@@ -91,7 +91,7 @@ const Right = styled.div`
   align-items: center;
   ${mobile({
     justifyContent: "center",
-    padding: "10px",
+    padding: "0px",
   })}
   ${tablet({
     justifyContent: "end",
@@ -118,9 +118,7 @@ const UserWrapper = styled.div`
   ${sl({
     gap: "5px",
   })}
-  ${between({
-    flexDirection: "column",
-  })}
+  ${between({})}
 `;
 const NoUserWrapper = styled.div`
   display: flex;

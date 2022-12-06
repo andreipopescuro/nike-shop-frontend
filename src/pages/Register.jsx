@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Navbar from "../components/Navbar";
 import { publicRequest } from "../lib/requestMethods";
@@ -67,6 +68,7 @@ const Span = styled.div`
 const Register = () => {
   const [inputs, setInputs] = useState({});
   const [span, setSpan] = useState();
+  const navigate = useNavigate();
   const handleInput = (e) => {
     setInputs((prev) => {
       return { ...prev, [e.target.name]: e.target.value };
@@ -82,6 +84,9 @@ const Register = () => {
         .then((response) => {
           setInputs({});
           setSpan("success");
+          setTimeout(() => {
+            navigate("/login");
+          }, 1000);
         });
     } catch (error) {
       setInputs({});

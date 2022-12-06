@@ -3,9 +3,7 @@ import styled from "styled-components";
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { Link } from "react-router-dom";
-import { mobile } from "../lib/responsive";
 import { tablet } from "../lib/responsive";
-import { between } from "../lib/responsive";
 import { useTranslation } from "react-i18next";
 
 const Container = styled.div`
@@ -13,7 +11,7 @@ const Container = styled.div`
   height: 100vh;
   display: flex;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.549);
   overflow: hidden;
   ${tablet({
     height: "50vh",
@@ -35,7 +33,7 @@ const Slide = styled.div`
   height: 100vh;
   display: flex;
   align-items: center;
-  background-color: #363945;
+  background: linear-gradient(#36454f, #818589);
   ${tablet({
     height: "50vh",
     textAlign: "center",
