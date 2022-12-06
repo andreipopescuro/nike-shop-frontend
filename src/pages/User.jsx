@@ -255,6 +255,7 @@ const User = () => {
                   onChange={(e) => setPass(e.target.value)}
                   value={pass}
                   name="password"
+                  minLength="6"
                 />
               </div>
               <div className="input-section">
