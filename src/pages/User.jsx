@@ -11,6 +11,7 @@ import Navbar from "../components/Navbar";
 import { userRequest } from "../lib/requestMethods";
 import { useTranslation } from "react-i18next";
 import { sl } from "../lib/responsive";
+import TimeAgo from "timeago-react";
 const Message = styled.div`
   margin-top: 16px;
   color: ${(props) => props.color};
@@ -83,6 +84,7 @@ const User = () => {
 
   const location = useLocation();
   const ID = location.pathname.split("/")[2];
+  const username = useSelector((state) => state?.user?.currentUser?.username);
   const userId = useSelector((state) => state.user?.currentUser?._id);
 
   if (ID !== userId) {
@@ -107,6 +109,8 @@ const User = () => {
     };
     getOrders();
   }, [status]);
+
+  console.log(orders);
 
   const handleChange = async (e) => {
     e.preventDefault();
@@ -221,6 +225,9 @@ const User = () => {
                       <div className="total">Total: $ {order.total}</div>
                     </div>
                   </Products>
+                  <div className="date">
+                    <TimeAgo datetime={order.createdAt} />
+                  </div>
                 </div>
               ))
             ) : (
@@ -230,6 +237,9 @@ const User = () => {
         </div>
         <div className="account-wrapper">
           <div className="title">{t("Account")}</div>
+          <div className="username" style={{ textAlign: "center" }}>
+            {username}
+          </div>
           <ForgotPassText onClick={handleActiveForm}>
             {t("Change password")}?
             <KeyboardArrowDownOutlined />
