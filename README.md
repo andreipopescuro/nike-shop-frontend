@@ -2,7 +2,7 @@
 # Visit my website https://www.popescu-andrei.com/
 
 ```diff
- Javascript
+! Javascript
 - Express
 + EJS
 # Multer for uploading images
