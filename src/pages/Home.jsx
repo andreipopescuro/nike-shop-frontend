@@ -16,7 +16,7 @@ const Home = () => {
   useEffect(() => {
     const getProducts = async () => {
       try {
-        const response = await publicRequest.get(`categories`);
+        const response = await publicRequest.get(`/categories`);
         const data = await response.data;
         setTemp(data);
       } catch (error) {

@@ -134,20 +134,27 @@ const Slider = ({ categories, onCh }) => {
         <ArrowBackIosIcon />
       </Arrow>
       <Wrapper slideIndex={slideIndex}>
-        {categories.map((slide) => (
-          <Slide key={slide._id} bg={slideIndex}>
-            <ImgContainer>
-              <Image src={slide.img} />
-              <BlackShadow />
-            </ImgContainer>
-            <InfoContainer>
-              <Title>Nike {t(slide.title)}</Title>
-              <Link to={`/products/${slide.title}`}>
-                <Button>{t("Show Products")}</Button>
-              </Link>
-            </InfoContainer>
-          </Slide>
-        ))}
+        {categories.length > 0 ? (
+          categories.map((slide) => (
+            <Slide key={slide._id} bg={slideIndex}>
+              <ImgContainer>
+                <Image src={slide.img} />
+                <BlackShadow />
+              </ImgContainer>
+              <InfoContainer>
+                <Title>Nike {t(slide.title)}</Title>
+                <Link to={`/products/${slide.title}`}>
+                  <Button>{t("Show Products")}</Button>
+                </Link>
+              </InfoContainer>
+            </Slide>
+          ))
+        ) : (
+          <div className="loading-homepage-slider">
+            Loading may take some time first time accessing...
+          </div>
+        )}
+        {}
       </Wrapper>
       <Arrow direction="right" onClick={() => handleClick("right")}>
         <ArrowForwardIosIcon />

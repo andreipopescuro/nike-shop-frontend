@@ -41,6 +41,7 @@ const Buttons = styled.div`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  gap: 6px;
 `;
 
 const Button = styled.button`
@@ -94,7 +95,7 @@ const Succes = () => {
         <Buttons>
           {user && (
             <Link to={`/dashboard/${user._id}`}>
-              <Button>Review order</Button>
+              <Button>Review your order</Button>
             </Link>
           )}
           <Link to="/">
