@@ -151,7 +151,7 @@ const Slider = ({ categories, onCh }) => {
           ))
         ) : (
           <div className="loading-homepage-slider">
-            Loading may take some time first time accessing...
+            The server just woke up, loading may take some... Please try a refresh.
           </div>
         )}
         {}
